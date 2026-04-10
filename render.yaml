@@ -7,17 +7,17 @@ services:
     dockerfilePath: ./Dockerfile
 
     envVars:
+      - key: PORT
+        value: 5678
+
       - key: N8N_HOST
         value: 0.0.0.0
 
       - key: N8N_PORT
-        value: $PORT
+        value: 5678
 
       - key: WEBHOOK_URL
         value: https://your-app-name.onrender.com
-
-      - key: GENERIC_TIMEZONE
-        value: Asia/Kolkata
 
       - key: N8N_BASIC_AUTH_ACTIVE
         value: "true"
@@ -26,4 +26,4 @@ services:
         value: admin
 
       - key: N8N_BASIC_AUTH_PASSWORD
-        sync: false   # set manually in dashboard
+        sync: false
