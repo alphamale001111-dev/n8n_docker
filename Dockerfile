@@ -14,5 +14,3 @@ RUN sed -i 's|http://deb.debian.org/debian|http://archive.debian.org/debian|g' /
         libc6-dev \
         libgmp-dev && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
-
-USER node
