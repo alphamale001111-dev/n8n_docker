@@ -6,15 +6,11 @@ services:
 
     dockerfilePath: ./Dockerfile
 
+    startCommand: n8n start --port=$PORT --host=0.0.0.0
+
     envVars:
       - key: PORT
-        value: 5678
-
-      - key: N8N_HOST
-        value: 0.0.0.0
-
-      - key: N8N_PORT
-        value: 5678
+        value: 10000   # Render usually prefers 10000
 
       - key: WEBHOOK_URL
         value: https://your-app-name.onrender.com
