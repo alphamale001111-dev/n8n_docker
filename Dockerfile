@@ -9,4 +9,5 @@ RUN apt-get update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-EXPOSE 10000
+# stay as root (Render-friendly)
+CMD ["sh", "-c", "n8n start --host=0.0.0.0 --port=${PORT:-10000}"]

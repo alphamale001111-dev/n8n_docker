@@ -2,15 +2,12 @@ services:
   - type: web
     name: n8n-pandoc
     runtime: docker
-    plan: free
 
     dockerfilePath: ./Dockerfile
 
-    startCommand: n8n start --port=$PORT --host=0.0.0.0
-
     envVars:
       - key: PORT
-        value: 10000   # Render usually prefers 10000
+        value: 10000
 
       - key: WEBHOOK_URL
         value: https://your-app-name.onrender.com
@@ -22,4 +19,4 @@ services:
         value: admin
 
       - key: N8N_BASIC_AUTH_PASSWORD
-        sync: false
+        value: Asdf@123
